@@ -1,0 +1,33 @@
+<div class="header-banner">
+  <div class="container">
+    <div class="flex">
+      <a class="logo" routerLink="/"><img src="/images/proxislogo.png" alt="Proxis Community Warfare" /></a>
+      <div>
+        <h1>Proxis Community Warfare</h1>
+        <div class="flex">
+          <a class="bttn" routerLink="/register">Register</a>
+          <a class="bttn" routerLink="/login">Login</a>
+          <input type="text" placeholder="Search..." />
+          <a (click)="search()" class="bttn search-bttn" aria-description="Search"><i class="fa fa-search"></i></a>
+
+        </div>
+        <div class="menu flex hide-xs">
+          <a routerLink="/lessons">Lessons</a>
+          <a routerLink="/resources">Resources</a>
+          <a routerLink="/reading">Reading</a>
+          <a routerLink="/about-us">About Us</a>
+          <a routerLink="/contact-us">Contact Us</a>
+          <a href="https://discord.gg/8dmHNwhjkh">Discord</a>
+        </div>
+      </div>
+    </div>
+    <div class="menu flex show-xs">
+      <a routerLink="/lessons">Lessons</a>
+      <a routerLink="/resources">Tools</a>
+      <a routerLink="/reading">Read</a>
+      <a routerLink="/about-us">About</a>
+      <a routerLink="/contact-us">Contact</a>
+      <a href="https://discord.gg/8dmHNwhjkh">Discord</a>
+    </div>
+  </div>
+</div>

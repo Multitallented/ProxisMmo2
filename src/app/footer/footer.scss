@@ -1,0 +1,20 @@
+@use 'variables' as v;
+
+.footer {
+  position: absolute;
+  height: 59px;
+  width: 100%;
+  background-color: black;
+  bottom: 0;
+  padding: 20px 0;
+  border-top: 1px grey solid;
+}
+
+.copyright {
+  padding-top: 20px;
+  font-size: 14px;
+  color: v.$harbor;
+}
+p {
+  padding-bottom: 0;
+}
