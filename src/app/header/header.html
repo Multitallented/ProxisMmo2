@@ -1,14 +1,19 @@
 <div class="header-banner">
   <div class="container">
     <div class="flex">
-      <a class="logo" routerLink="/"><img src="/images/proxislogo.png" alt="Proxis Community Warfare" /></a>
+      <a class="logo" routerLink="/"><img src="/images/proxis-icon.png" alt="Proxis Community Warfare" /></a>
       <div>
         <h1>Proxis Community Warfare</h1>
         <div class="flex">
-          <a class="bttn" routerLink="/register">Register</a>
-          <a class="bttn" routerLink="/login">Login</a>
+          @if (isLoggedIn()) {
+            <a class="bttn" routerLink="/profile">Profile</a>
+            <a class="bttn" (click)="$event.preventDefault(); logout()">Logout</a>
+          } @else {
+            <a class="bttn" routerLink="/register">Register</a>
+            <a class="bttn" routerLink="/login">Login</a>
+          }
           <input type="text" placeholder="Search..." />
-          <a (click)="search()" class="bttn search-bttn" aria-description="Search"><i class="fa fa-search"></i></a>
+          <a (click)="search()" class="bttn search-bttn" aria-description="Search"><fa-icon [icon]="faSearch"></fa-icon> </a>
 
         </div>
         <div class="menu flex hide-xs">

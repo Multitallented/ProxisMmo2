@@ -102,7 +102,7 @@ ul {
 
 #header {border-bottom: 1px grey solid;}
 #header h1 {font-size: 36px; margin: 30px 20px 0 0; line-height: 25px;}
-#header h1 span {font-size: 14px;}
+#header h1 span {font-size: 16px;}
 
 #flash-message {color: #d20424;}
 
@@ -127,7 +127,7 @@ ul {
 .inline {display: inline;}
 .under {text-decoration: underline;}
 .hr {border-top: grey 1px solid;}
-.bttn, input[type=submit], button {height: 22px; line-height: 22px; font-size: 12px; padding: 0 10px;
+.bttn, input[type=submit], button {height: 22px; line-height: 22px; font-size: 14px; padding: 0 10px;
   border: 1px solid #3F3F3F; -webkit-box-shadow: 0px 1px 0px rgba(5,5,5,1) inset, 0px 1px 0px rgba(0,0,0,0.3);
   box-shadow: 0px 1px 0px rgba(5,5,5,1) inset, 0px 1px 0px rgba(0,0,0,0.3); border-radius: 3px; display: inline-block; white-space: nowrap; -webkit-transition: all 0.2s ease-in-out;
   text-decoration: none; color: #B27204; cursor: pointer;}

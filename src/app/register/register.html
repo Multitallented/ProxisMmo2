@@ -1,0 +1,12 @@
+<form (ngSubmit)="onSubmit()">
+  <input [(ngModel)]="username" type="text" name="username" placeholder="Username"><br>
+  <input [(ngModel)]="password" type="password" name="password" placeholder="Password"><br>
+  <input [(ngModel)]="password2" type="password" name="password" placeholder="Confirm Password"><br>
+  <button type="submit">Register</button>
+  <br>
+  <span class="red">{{error()}}</span>
+  <br>
+  Username must match your discord username.
+  <br>
+  Password must be at least 8 characters long and have at least one number, one lowercase letter, one uppercase letter, one special character and no spaces.
+</form>
