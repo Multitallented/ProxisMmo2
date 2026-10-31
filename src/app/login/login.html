@@ -1,5 +1,9 @@
-<form (ngSubmit)="onSubmit()">
-  <input [(ngModel)]="username" type="text" name="username" placeholder="username">
-  <input [(ngModel)]="password" type="password" name="password" placeholder="password">
-  <button type="submit">Login</button>
-</form>
+<div class="container">
+  <h1>Login</h1>
+  <form (ngSubmit)="onSubmit()">
+    <input [(ngModel)]="username" type="text" name="username" placeholder="username">
+    <input [(ngModel)]="password" type="password" name="password" placeholder="password">
+    <button type="submit">Login</button>
+  </form>
+</div>
+

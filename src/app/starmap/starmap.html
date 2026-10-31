@@ -1,0 +1,11 @@
+<div id="map">
+  @for (planet of planetsArray(); track planet.planet) {
+    <div class="planet" [style.left]="(planet.x*10+10460) + 'px'" [style.top]="(planet.y*-10+18793) + 'px'">
+      <img [src]="'/images/planets/' + planet.image" alt="{{planet.planet}}" /><br>
+      {{planet.planet}}<br>
+      {{planet.controller}}
+    </div>
+  } @empty {
+    <p>No planets found</p>
+  }
+</div>

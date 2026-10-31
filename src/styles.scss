@@ -96,6 +96,19 @@ ul {
     display: none;
   }
 }
+body {
+  background: url('/images/bg.jpg');
+  background-position: 0 0;
+  animation: scrollBackground 40s linear infinite;
+}
+@keyframes scrollBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -600px -600px;
+  }
+}
 
 #container {width: 1000px; margin: 0 auto; background: url('/images/footerbg.png'); position: relative;
   padding: 0 10px; border-radius: 5px; border: 1px solid grey;}
@@ -143,6 +156,6 @@ input[type=textfield], input[type=text], input[type=password], select option {ba
   -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
   transition: border linear 0.2s, box-shadow linear 0.2s;}
 textarea {background-color: transparent; background-image: url('http://static.mwomercs.com/img/theme/tbg/80.png'); font-family: "Stratum1 Regular", Arial, sans-serif; color: #DDD; border: 1px solid #555;}
-.planet {width: 140px;}
+.planet {width: 160px;}
 .planet .hover, .dropship .hover {display: none;}
 .planet:hover .hover, .dropship:hover .hover {display: block; background: #222; border-radius: 5px; border: 1px solid grey; position: absolute; margin: 50px 0 0 30px; padding-left: 10px; width: 200px; z-index: 3;}

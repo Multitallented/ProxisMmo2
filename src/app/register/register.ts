@@ -17,6 +17,7 @@ export class Register implements OnInit{
   username = '';
   password = '';
   password2 = '';
+  email = '';
   error = signal<string>('');
 
   constructor(private http: HttpClient, private config: AppConfigService, private router: Router) { }
@@ -43,8 +44,13 @@ export class Register implements OnInit{
       return;
     }
 
+    if (this.email.length < 3 || !this.email.match(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/)) {
+      this.error.set('Invalid email');
+      return;
+    }
+
     const url = this.config.apiUrl;
-    this.http.post(url + 'register', {username: this.username, password: this.password})
+    this.http.post(url + 'register', {username: this.username, password: this.password, email: this.email})
       .pipe(
         catchError(err => {
           this.error.set(err.error.detail);
