@@ -1,10 +1,17 @@
 <div id="map">
   @for (planet of planetsArray(); track planet.planet) {
-    <div class="planet" [style.left]="(planet.x*10+10460) + 'px'" [style.top]="(planet.y*-10+18793) + 'px'">
+    <div [ngClass]="{higher: planet.planet.indexOf('Cluster') > -1}" class="planet" [style.left]="(planet.x*12+12552) + 'px'" [style.top]="(planet.y*-12+22552) + 'px'">
       <img [src]="'/images/planets/' + planet.image" alt="{{planet.planet}}" /><br>
-      {{planet.planet}}<br>
-      {{planet.controller}}
+      {{planet.planet}}
+      <span><br>{{planet.controller}}</span>
     </div>
+    @if (planet.controller !== 'Uninhabited' && planet.controller !== 'Unknown' && planet.controller !== 'Not recorded' && planet.controller !== 'ComStar' && planet.controller !== 'Independent') {
+      <div
+        [ngClass]="{viper: planet.controller == 'Clan Steel Viper', outworlds: planet.controller == 'Outworlds Alliance', tortuga: planet.controller == 'Tortuga Dominions', circinus: planet.controller == 'Circinus Federation', lothian: planet.controller == 'Lothian League', illyrian: planet.controller == 'Illyrian Palatinate', canopus: planet.controller == 'Magistracy of Canopus', marian: planet.controller == 'Marian Hegemony', cat: planet.controller == 'Clan Nova Cat', jag: planet.controller == 'Clan Smoke Jaguar', bear: planet.controller == 'Clan Ghost Bear', jade: planet.controller == 'Clan Jade Falcon', wolf: planet.controller == 'Clan Wolf', aurigan: planet.controller == 'Aurigan', taurian: planet.controller == 'Taurian Concordat', liao: planet.controller == 'Capellan Confederation', davion: planet.controller == 'Federated Suns', lyran: planet.controller == 'Lyran Commonwealth', frr: planet.controller == 'Free Rasalhague Republic', fwl: planet.controller == 'Free Worlds League', draconis: planet.controller == 'Draconis Combine'}"
+        class="planet-controller" [style.left]="(planet.x*12+12502) + 'px'" [style.top]="(planet.y*-12+22502) + 'px'">
+
+      </div>
+    }
   } @empty {
     <p>No planets found</p>
   }

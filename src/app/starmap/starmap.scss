@@ -1,9 +1,104 @@
 #map {
   position: relative;
-  width: 30000px;
-  height: 39000px;
+  width: 36000px;
+  height: 46800px;
 }
 
 .planet {
   position: absolute;
+  z-index: 3;
+
+  &.higher {
+    z-index: 4;
+  }
+
+  span {
+    display: none;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    cursor: pointer;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 5;
+
+    span {
+      display: inline;
+    }
+  }
+}
+
+.planet-controller {
+  height: 130px;
+  width: 130px;
+  position: absolute;
+  z-index: 1;
+
+  &.liao {
+    background: radial-gradient(circle, rgba(122, 142, 79, 0.6) 0%, rgba(122, 142, 79, 0) 70%);
+  }
+  &.draconis {
+    background: radial-gradient(circle, rgba(182, 6, 0, 0.6) 0%, rgba(182, 6, 0, 0) 70%);
+  }
+  &.fwl {
+    background: radial-gradient(circle, rgba(128, 0, 106, 0.6) 0%, rgba(128, 0, 106, 0) 70%);
+  }
+  &.lyran {
+    background: radial-gradient(circle, rgba(0, 112, 154, 0.6) 0%, rgba(0, 112, 154, 0) 70%);
+  }
+  &.frr {
+    background: radial-gradient(circle, rgba(0, 153, 146, 0.6) 0%, rgba(0, 153, 146, 0) 70%);
+  }
+  &.davion {
+    background: radial-gradient(circle, rgba(255, 204, 0, 0.5) 0%, rgba(255, 204, 0, 0) 70%);
+  }
+  &.taurian {
+    background: radial-gradient(circle, rgba(164, 49, 14, 0.6) 0%, rgba(164, 49, 14, 0) 70%);
+  }
+  &.aurigan {
+    background: radial-gradient(circle, rgba(61, 64, 46, 0.6) 0%, rgba(61, 64, 46, 0) 70%);
+  }
+  &.wolf {
+    background: radial-gradient(circle, rgba(119, 15, 0, 0.5) 0%, rgba(119, 15, 0, 0) 70%);
+  }
+  &.jade {
+    background: radial-gradient(circle, rgba(0, 106, 42, 0.6) 0%, rgba(0, 106, 42, 0) 70%);
+  }
+  &.bear {
+    background: radial-gradient(circle, rgba(83, 104, 130, 0.6) 0%, rgba(83, 104, 130, 0) 70%);
+  }
+  &.jag {
+    background: radial-gradient(circle, rgba(33, 36, 68, 0.8) 0%, rgba(33, 36, 68, 0) 70%);
+  }
+  &.cat {
+    background: radial-gradient(circle, rgba(231, 228, 228, 0.4) 0%, rgba(231, 228, 228, 0) 70%);
+  }
+  &.marian {
+    background: radial-gradient(circle, rgba(0, 70, 153, 0.4) 0%, rgba(0, 70, 153, 0) 70%);
+  }
+  &.illyrian {
+    background: radial-gradient(circle, rgba(204, 108, 98, 0.4) 0%, rgba(204, 108, 98, 0) 70%);
+  }
+  &.lothian {
+    background: radial-gradient(circle, rgba(125, 194, 215, 0.4) 0%, rgba(125, 194, 215, 0) 70%);
+  }
+  &.circinus {
+    background: radial-gradient(circle, rgba(213, 210, 178, 0.4) 0%, rgba(213, 210, 178, 0) 70%);
+  }
+  &.tortuga {
+    background: radial-gradient(circle, rgba(114, 18, 29, 0.6) 0%, rgba(114, 18, 29, 0) 70%);
+  }
+  &.outworlds {
+    background: radial-gradient(circle, rgba(121, 211, 238, 0.4) 0%, rgba(121, 211, 238, 0) 70%);
+  }
+  &.viper {
+    background: radial-gradient(circle, rgba(127, 204, 161, 0.5) 0%, rgba(127, 204, 161, 0) 70%);
+  }
+  &.canopus {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 0, 0, 0.5) 15%, rgba(255, 165, 0, 0.35) 25%, rgba(255, 255, 0, 0.25) 35%, rgba(0, 255, 0, 0.17) 45%, rgba(0, 0, 255, 0.15) 55%, rgba(75, 0, 130, 0.1) 60%, rgba(127, 0, 255, 0.05) 65%, rgba(0, 0, 0, 0) 70%);
+  }
 }

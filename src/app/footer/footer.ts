@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {HeaderService} from '../header-service';
 
 @Component({
   imports: [],
@@ -6,4 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './footer.scss',
   templateUrl: './footer.html',
 })
-export class Footer {}
+export class Footer {
+
+  constructor(public headerService: HeaderService) { }
+}
